@@ -256,9 +256,10 @@ section h2 {
   color: #f9f7f3 !important;
 }
 
-.nav-link:hover {
-  text-decoration: none;      /* drop the underline */
-  color: #7CD752 !important;   /* swap the text color on hover */
+nav.custom-navbar .nav-link:hover,
+nav.custom-navbar .nav-link:focus {
+  background-color: transparent !important;  /* kill the gray flash */
+  color: #7CD752 !important;                 /* your green hover color */
 }
 
 .navbar-nav {
