@@ -257,8 +257,8 @@ section h2 {
 }
 
 .nav-link:hover {
-  text-decoration: underline;
-  color: #e8ebe1 !important;
+  text-decoration: none;      /* drop the underline */
+  color: #7CD752 !important;   /* swap the text color on hover */
 }
 
 .navbar-nav {
