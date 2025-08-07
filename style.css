@@ -348,7 +348,7 @@ nav.custom-navbar .nav-link:focus {
 }
 
 .header-h-icon {
-  width: 1.2em;        /* match the x-height of the “D” */
-  margin-right: 0.2em; /* tighten the gap */
+  width: 1em;        /* match the x-height of the “D” */
+  margin-right: 0.1em; /* tighten the gap */
   vertical-align: middle;
 }
