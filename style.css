@@ -344,10 +344,11 @@ nav.custom-navbar .nav-link:focus {
 .header-with-icon {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  /* if you want it full–width centered, use display:flex on the container instead */
 }
 
 .header-h-icon {
-  width: 1.3em;     /* tweak until it matches your “H” height */
-  margin-right: 0.4em;
+  width: 1.2em;        /* match the x-height of the “D” */
+  margin-right: 0.2em; /* tighten the gap */
+  vertical-align: middle;
 }
