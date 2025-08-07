@@ -341,17 +341,16 @@ nav.custom-navbar .nav-link:focus {
   border-radius: 4px;
 }
 
-.header-with-icon {
+.logo-with-label {
   display: inline-flex;
   align-items: center;
-  /* prevent the icon or the “DLM:” from ever wrapping */
-  white-space: nowrap;
-  flex-wrap: nowrap;
+  white-space: nowrap;  /* ← never break inside here */
 }
 
+/* make the SVG icon size follow the font-size exactly */
 .header-h-icon {
-  width: 1.1em;        /* match the x-height of the “D” */
-  margin-right: 0.02em; /* tighten the gap */
-  vertical-align: middle;
-  flex-shrink: 0;
+  height: 1em;     /* exactly the x-height of the current font */
+  width: auto;     /* preserve its aspect ratio */
+  margin-right: 0.2em; /* a hair of breathing room */
+  flex-shrink: 0;  /* never let it shrink smaller */
 }
