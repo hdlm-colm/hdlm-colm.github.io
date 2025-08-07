@@ -23,14 +23,14 @@ body {
 }
 
 footer.custom-footer {
-  background-color: #e8ebe1; /* Similar teal-blue */
+  background-color: #FDEBD0; /* Similar teal-blue */
   color: #3a3a3a;
   text-align: center;
   padding: 3rem 1rem;
 }
 
 .footer-box {
-  background-color: #f3f5ef; /* slightly darker than beige background */
+  background-color: #FFF5EB; /* slightly darker than beige background */
   padding: 1.5rem;
   border-radius: 12px;
   max-width: 900px;
@@ -47,7 +47,7 @@ footer.custom-footer {
 }
 
 header.custom-header {
-  background-color: #e8ebe1;
+  background-color: #FDEBD0;
   color: #3a3a3a;
   padding: 2rem 1rem;
   border-radius: 0 0 16px 16px;
@@ -238,7 +238,7 @@ section h2 {
 }
 
 .custom-navbar {
-  background-color: #8a8d6f; /* Dark red color */
+  background-color: #7CD752; /* Dark red color */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
