@@ -57,7 +57,7 @@ footer.custom-footer {
 }
 
 header.custom-header {
-  background-color: #1F4E79;
+  background-color: #a0c2e2;
   color: #fffff0;
   padding: 2rem 1rem;
   border-radius: 0 0 16px 16px;
@@ -348,7 +348,7 @@ nav.custom-navbar .nav-link:focus {
 }
 
 .header-h-icon {
-  width: 1em;        /* match the x-height of the “D” */
-  margin-right: 0.1em; /* tighten the gap */
+  width: 1.1em;        /* match the x-height of the “D” */
+  margin-right: 0.02em; /* tighten the gap */
   vertical-align: middle;
 }
