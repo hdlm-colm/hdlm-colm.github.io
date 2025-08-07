@@ -340,3 +340,14 @@ nav.custom-navbar .nav-link:focus {
   font-style: italic;
   border-radius: 4px;
 }
+
+.header-with-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-h-icon {
+  width: 1.3em;     /* tweak until it matches your “H” height */
+  margin-right: 0.4em;
+}
