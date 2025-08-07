@@ -6,122 +6,128 @@
     <title>HDLM: Unifying Autoregressive and Diffusion-Based Sequence Generation</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <!-- Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="style.css"/>
-
-    <!-- <style>
-      /* Minimal custom styles for demo */
-      html { scroll-behavior: smooth; }
-      body { background-color: #0D253F; color: #f9f7f3; }
-      .custom-header { background: #1F4E79; color: #fff; padding: 2rem 1rem; }
-      .custom-header p { color: #ddd; }
-      section { background: #fff; border-radius: 8px; margin-bottom: 2rem; padding: 1.5rem; }
-      .button-group .custom-btn { margin: 0.25rem; }
-      .nav-logo { height: 40px; }
-      .navbar { padding: 0.5rem 1rem; }
-      .navbar-nav .nav-link { color: #f9f7f3 !important; }
-      .navbar-nav .nav-link:hover { color: #7CD752 !important; background: transparent !important; }
-    </style> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body id="top" data-bs-spy="scroll" data-bs-target="#toc" data-bs-smooth-scroll="true">
-
+  <body id="top" data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-smooth-scroll="true">
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
       <div class="container">
         <a class="navbar-brand" href="#top">
-          <img src="images/ServiceNow-Logo-2022_400x200.png" alt="ServiceNow" class="nav-logo"/>
+          <img src="images/ServiceNow-Logo-2022_400x200.png" class="nav-logo" alt="ServiceNow" />
         </a>
-        <button class="navbar-toggler" type="button" 
-                data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul class="navbar-nav gap-4">
-            <li class="nav-item"><a class="nav-link" href="#abstract"><i class="fas fa-book-open"></i> Abstract</a></li>
-            <li class="nav-item"><a class="nav-link" href="#method"><i class="fas fa-cogs"></i> Method</a></li>
-            <li class="nav-item"><a class="nav-link" href="#efficiency"><i class="fas fa-tachometer-alt"></i> Efficiency</a></li>
-            <li class="nav-item"><a class="nav-link" href="#results"><i class="fas fa-chart-bar"></i> Results</a></li>
-            <li class="nav-item"><a class="nav-link" href="#inference"><i class="fas fa-wrench"></i> Inference</a></li>
-            <li class="nav-item"><a class="nav-link" href="#examples"><i class="fas fa-file-alt"></i> Examples</a></li>
-            <li class="nav-item"><a class="nav-link" href="#bibtex"><i class="fas fa-quote-right"></i> Citation</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#abstract">
+                <i class="fas fa-book-open"></i> Abstract
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#method">
+                <i class="fas fa-cogs"></i> Method
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#efficiency">
+                <i class="fas fa-tachometer-alt"></i> Efficiency
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#results">
+                <i class="fas fa-chart-bar"></i> Results
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#inference">
+                <i class="fas fa-wrench"></i> Inference
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#examples">
+                <i class="fas fa-file-alt"></i> Examples
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#bibtex">
+                <i class="fas fa-quote-right"></i> Citation
+              </a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- ================= HEADER ================= -->
-    <header class="custom-header w-100 fade-in">
-      <div class="container">
+    <!-- HEADER -->
+    <header class="custom-header fade-in">
+      <div class="container text-center">
         <h1 class="h3 fw-semibold">
           HDLM: Unifying Autoregressive and Diffusion-Based Sequence Generation
         </h1>
-
         <div class="row justify-content-center my-3">
-          <div class="col-md-3 text-center">
-            <strong><a
-                href="https://nimafathi.github.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="author-link"
-                >Nima Fathi</a
-              ></strong><br />
-            <small class="text-white-50"
-              >Mila - Quebec AI Institute, <br> ServiceNow Research</small
-            >
+          <div class="col-6 col-md-3 text-center">
+            <strong>
+              <a href="https://nimafathi.github.io/" class="author-link" target="_blank">
+                Nima Fathi
+              </a>
+            </strong><br />
+            <small class="text-white-50">
+              Mila – Quebec AI Institute,<br />ServiceNow Research
+            </small>
           </div>
-          <div class="col-md-3 text-center">
-            <strong
-              ><a
-                href="https://www.servicenow.com/research/author/pierre-andre-noel.html" 
-                target="_blank"
-                rel="noopener noreferrer"
+          <div class="col-6 col-md-3 text-center">
+            <strong>
+              <a
+                href="https://www.servicenow.com/research/author/pierre-andre-noel.html"
                 class="author-link"
-                >Pierre-André Noël</a
-              ></strong
-            ><br />
-            <small class="text-white-50"
-              >ServiceNow Research</small
-            >
+                target="_blank"
+              >
+                Pierre-André Noël
+              </a>
+            </strong><br />
+            <small class="text-white-50">ServiceNow Research</small>
           </div>
-          <div class="col-md-3 text-center">
-            <strong><a
-                href="https://tscholak.github.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="author-link"
-                >Torsten Scholak</a
-              ></strong><br />
-            <small class="text-white-50"
-              >ServiceNow Research</small
-            >
+          <div class="col-6 col-md-3 text-center">
+            <strong>
+              <a href="https://tscholak.github.io/" class="author-link" target="_blank">
+                Torsten Scholak
+              </a>
+            </strong><br />
+            <small class="text-white-50">ServiceNow Research</small>
           </div>
         </div>
         <p class="workshop-name">COLM 2025</p>
-        
-        <!-- Button group for better organization -->
+
         <div class="button-group">
-          <!-- arXiv button -->
           <a
             class="custom-btn"
             href="https://arxiv.org/abs/2504.06416"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              src="images/huggingface_logo-noborder.svg"
-              width="20"
-              height="20"
-              class="me-2"
-              alt="Hugging Face Logo"
-            />
-            arXiv
+            <i class="fas fa-file-alt me-2"></i> arXiv
           </a>
-          <!-- Hugging Face Weights button -->
           <a
             class="custom-btn"
             href="https://huggingface.co/your-username/your-model-repo"
@@ -129,25 +135,20 @@
             rel="noopener noreferrer"
           >
             <img
-              src="images/arxiv-icon.svg"
+              src="images/huggingface_logo-noborder.svg"
               width="20"
-              height="20"
               class="me-2"
-              alt="arXiv Logo"
+              alt="Hugging Face"
             />
-            HDLM
+            Weights
           </a>
-          <!-- GitHub button -->
           <a
             class="custom-btn"
             href="https://github.com/servicenow/hdlm"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <svg width="20" height="20" class="me-2" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.300 24 12c0-6.627-5.373-12-12-12z"/>
-            </svg>
-            Code
+            <i class="fab fa-github me-2"></i> Code
           </a>
           <a
             class="custom-btn"
@@ -155,135 +156,217 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <svg width="20" height="20" class="me-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7.5 2.25H16.5C17.7426 2.25 18.75 3.25736 18.75 4.5V19.5C18.75 20.7426 17.7426 21.75 16.5 21.75H7.5C6.25736 21.75 5.25 20.7426 5.25 19.5V4.5C5.25 3.25736 6.25736 2.25 7.5 2.25Z" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M9 8.25H15M9 11.25H15M9 14.25H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            Blog
+            <i class="fas fa-blog me-2"></i> Blog
           </a>
-        </div>
-        <div class="company-attribution">
-          <img src="images/ServiceNow-Logo-2022_400x200.png" alt="ServiceNow" class="servicenow-logo">
         </div>
       </div>
     </header>
 
-    <!-- TEASER -->
-    <section class="text-center">
-      <img src="images/hybrid_process.png" class="img-fluid rounded mb-3" alt="Hybrid Noising Process"/>
+    <!-- TEASER FIGURE -->
+    <section class="text-center fade-in">
+      <img
+        src="images/hybrid_process.png"
+        class="img-fluid teaser-img mb-3"
+        alt="Hybrid Noising Process"
+      />
       <p class="text-muted small">
-        <strong>Figure:</strong> Hybrid Noising Process illustrating how HDLM interpolates
-        between autoregressive (absorb) and diffusion (uniform) steps via per-token hyperschedules.
+        <strong>Figure:</strong> Hybrid Noising Process illustrating how HDLM
+        interpolates between autoregressive (absorb) and diffusion (uniform)
+        steps via per-token hyperschedules.
       </p>
     </section>
 
     <div class="container-lg">
-
       <!-- ABSTRACT -->
-      <section id="abstract">
+      <section id="abstract" class="fade-in">
         <h2>Abstract</h2>
         <p>
-           We present significant extensions to diffusion-based sequence generation models, blurring the line with autoregressive language models.
-              We introduce hyperschedules, which assign distinct noise schedules to individual token positions, generalizing both autoregressive models (e.g., GPT) and conventional diffusion models (e.g., SEDD, MDLM) as special cases. 
-              Second, we propose two hybrid token-wise noising processes that interpolate between absorbing and uniform processes, enabling the model to fix past mistakes, and we introduce a novel inference algorithm that leverages this new feature in a simplified context inspired from MDLM.
-              To support efficient training and inference, we design attention masks compatible with KV-caching.
-            Our methods achieve state-of-the-art perplexity and generate diverse, high-quality sequences across standard benchmarks, suggesting a promising path for autoregressive diffusion-based sequence generation.
+          We present significant extensions to diffusion-based sequence
+          generation models, blurring the line with autoregressive language
+          models. We introduce <em>hyperschedules</em>, which assign distinct
+          noise schedules to individual token positions, generalizing both
+          autoregressive models (e.g., GPT) and conventional diffusion models
+          (e.g., SEDD, MDLM) as special cases. We also propose two hybrid
+          token-wise noising processes that interpolate between absorbing and
+          uniform processes—enabling the model to fix past mistakes—and a novel
+          inference algorithm that leverages this new feature. To support
+          efficient training and inference, we design attention masks compatible
+          with KV-caching. Our methods achieve state-of-the-art perplexity and
+          generate diverse, high-quality sequences across standard benchmarks,
+          suggesting a promising path for autoregressive diffusion-based
+          sequence generation.
         </p>
       </section>
 
       <!-- METHOD -->
-      <section id="method">
+      <section id="method" class="fade-in">
         <h2>Method</h2>
-        <p>HDLM introduces the concept of a <em>hyperschedule</em>: a per-token noise schedule that can recover both
-           autoregressive and diffusion behaviors.</p>
+        <p>
+          HDLM introduces the concept of a <em>hyperschedule</em>: a per-token
+          noise schedule that can recover both autoregressive and diffusion
+          behaviors.
+        </p>
         <ul>
-          <li><strong>Hyperschedules:</strong> Learn per-step noise fractions that morph between AR and diffusion.</li>
-          <li><strong>Hybrid Processes:</strong> Combine “absorb” (mask) and “uniform” noising for corrective denoising.</li>
-          <li><strong>Adaptive Correction Sampler:</strong> Leverage confidence to iteratively refine early mistakes.</li>
+          <li>
+            <strong>Hyperschedules:</strong> Learn per-step noise fractions that
+            morph between AR and diffusion.
+          </li>
+          <li>
+            <strong>Hybrid Processes:</strong> Combine “absorb” (mask) and
+            “uniform” noising for corrective denoising.
+          </li>
+          <li>
+            <strong>Adaptive Correction Sampler:</strong> Leverage confidence to
+            iteratively refine early mistakes.
+          </li>
         </ul>
-
         <div class="row">
           <div class="col-md-10 offset-md-1">
-            <img src="images/hyperschedule_panels.png" class="img-fluid rounded" alt="Hyperschedule Panels"/>
+            <img
+              src="images/hyperschedule_panels.png"
+              class="img-fluid fade-in rounded"
+              alt="Hyperschedule Panels"
+            />
             <p class="text-muted small text-center mt-2">
-              <strong>Figure:</strong> Four examples of hyperschedules—
-              (a) Quenched (AR), (b) Flat diffusion, (c) Block annealing, (d) Slide annealing.
+              <strong>Figure:</strong> Four example hyperschedules—
+              (a) Quenched (AR), (b) Flat diffusion, (c) Block annealing,
+              (d) Slide annealing.
             </p>
           </div>
         </div>
       </section>
 
       <!-- EFFICIENCY -->
-      <section id="efficiency">
+      <section id="efficiency" class="fade-in">
         <h2>Efficiency via Attention Masks</h2>
         <p>
           To avoid recomputing settled tokens, HDLM uses:
         </p>
         <ul>
           <li><strong>KV-Caching:</strong> Cache key/value pairs of settled tokens.</li>
-          <li><strong>Token Partitioning:</strong> Split tokens into <em>settled</em>, <em>active</em>, and <em>worthless</em>.</li>
+          <li>
+            <strong>Token Partitioning:</strong> Split tokens into
+            <em>settled</em>, <em>active</em>, and <em>worthless</em>.
+          </li>
         </ul>
-        <p>
-          Two inference modes:
-        </p>
+        <p>Two inference modes:</p>
         <ul>
-          <li><strong>Aligned (MLM-style):</strong> Active tokens attend to themselves and all settled ones.</li>
-          <li><strong>Shifted (AR-style):</strong> Each new token attends only to previously settled tokens.</li>
+          <li>
+            <strong>Aligned (MLM-style):</strong> Active tokens attend to themselves
+            and all settled ones.
+          </li>
+          <li>
+            <strong>Shifted (AR-style):</strong> Each new token attends only to
+            previously settled tokens.
+          </li>
         </ul>
         <div class="row">
           <div class="col-md-10 offset-md-1">
-            <img src="images/attention_masks.png" class="img-fluid rounded" alt="Attention Masks"/>
+            <img
+              src="images/attention_masks.png"
+              class="img-fluid fade-in rounded"
+              alt="Attention Masks"
+            />
             <p class="text-muted small text-center mt-2">
-              <strong>Figure:</strong> Training attention masks for aligned (striped+solid) and shifted (solid only) modes.
+              <strong>Figure:</strong> Training attention masks for aligned
+              (striped+solid) and shifted (solid only) modes.
             </p>
           </div>
         </div>
       </section>
 
       <!-- RESULTS -->
-      <section id="results">
-        <h2>Results: Pareto Front & Zero-Shot Perplexity</h2>
+      <section id="results" class="fade-in">
+        <h2>Results: Pareto Front &amp; Zero-Shot Perplexity</h2>
 
-        <!-- Pareto Front -->
         <div class="row mb-4">
           <div class="col-md-6">
-            <img src="images/pareto_front_entropy.png" class="img-fluid rounded" alt="Entropy vs Perplexity"/>
+            <img
+              src="images/pareto_front_entropy.png"
+              class="img-fluid rounded"
+              alt="Entropy vs Perplexity"
+            />
           </div>
           <div class="col-md-6">
-            <img src="images/pareto_front_mauve.png" class="img-fluid rounded" alt="MAUVE vs Perplexity"/>
+            <img
+              src="images/pareto_front_mauve.png"
+              class="img-fluid rounded"
+              alt="MAUVE vs Perplexity"
+            />
           </div>
         </div>
         <p class="text-muted">
-          HDLM variants (green) lie on the Pareto frontier, offering lower GPT-2 judged perplexity
-          at matched or higher diversity than AR (blue) and diffusion (orange) baselines.
+          HDLM variants (green) lie on the Pareto frontier, offering lower
+          GPT-2-judged perplexity at matched or higher diversity than AR (blue)
+          and diffusion (orange) baselines.
         </p>
 
-        <!-- Zero-Shot Table -->
         <div class="table-responsive mb-3">
           <table class="table table-bordered table-striped">
             <thead class="table-light">
               <tr>
-                <th>Method</th><th>WikiText</th><th>LAMBADA</th><th>PubMed</th><th>arXiv</th>
+                <th>Method</th>
+                <th>WikiText</th>
+                <th>LAMBADA</th>
+                <th>PubMed</th>
+                <th>arXiv</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td>Transformer (Sahoo<em>et al.</em>)</td><td>25.8</td><td>51.3</td><td>49.0</td><td>41.7</td></tr>
-              <tr><td>SEDD (Lou<em>et al.</em>)</td><td>36.0</td><td>48.9</td><td>45.4</td><td>40.0</td></tr>
-              <tr><td>MDLM (Sahoo<em>et al.</em>)</td><td>33.2</td><td>48.3</td><td>43.1</td><td>37.9</td></tr>
-              <tr><td>BD3-LM (Arriola<em>et al.</em>)</td><td>31.3</td><td>50.0</td><td>42.5</td><td>39.2</td></tr>
-              <tr class="table-success"><td>&gamma;-Hybrid (Ours)</td><td>30.0</td><td><strong>45.4</strong></td><td>46.6</td><td>40.6</td></tr>
-              <tr class="table-success"><td>&epsilon;-Hybrid (Ours)</td><td>32.5</td><td>50.2</td><td><strong>41.2</strong></td><td><strong>37.8</strong></td></tr>
+              <tr>
+                <td>Transformer (Sahoo<em>et al.</em>)</td>
+                <td>25.8</td>
+                <td>51.3</td>
+                <td>49.0</td>
+                <td>41.7</td>
+              </tr>
+              <tr>
+                <td>SEDD (Lou<em>et al.</em>)</td>
+                <td>36.0</td>
+                <td>48.9</td>
+                <td>45.4</td>
+                <td>40.0</td>
+              </tr>
+              <tr>
+                <td>MDLM (Sahoo<em>et al.</em>)</td>
+                <td>33.2</td>
+                <td>48.3</td>
+                <td>43.1</td>
+                <td>37.9</td>
+              </tr>
+              <tr>
+                <td>BD3-LM (Arriola<em>et al.</em>)</td>
+                <td>31.3</td>
+                <td>50.0</td>
+                <td>42.5</td>
+                <td>39.2</td>
+              </tr>
+              <tr class="table-success">
+                <td>γ-Hybrid (Ours)</td>
+                <td>30.0</td>
+                <td><strong>45.4</strong></td>
+                <td>46.6</td>
+                <td>40.6</td>
+              </tr>
+              <tr class="table-success">
+                <td>ε-Hybrid (Ours)</td>
+                <td>32.5</td>
+                <td>50.2</td>
+                <td><strong>41.2</strong></td>
+                <td><strong>37.8</strong></td>
+              </tr>
             </tbody>
           </table>
         </div>
       </section>
 
       <!-- INFERENCE -->
-      <section id="inference">
+      <section id="inference" class="fade-in">
         <h2>Inference: Adaptive Correction Sampler (ACS)</h2>
         <p>
-          Traditional AR decoding cannot revise past tokens. ACS breaks this by iteratively
-          refining low-confidence predictions, controlled by hyperparameter &eta;.
+          Traditional AR decoding cannot revise past tokens. ACS breaks this by
+          iteratively refining low-confidence predictions, controlled by
+          hyperparameter &eta;.
         </p>
         <div class="table-responsive mb-3">
           <table class="table table-bordered table-striped">
@@ -295,89 +378,132 @@
                 <th colspan="4">Entropy ↑</th>
               </tr>
               <tr>
-                <th>ρ=8</th><th>ρ=4</th><th>ρ=2</th><th>ρ=1</th>
-                <th>ρ=8</th><th>ρ=4</th><th>ρ=2</th><th>ρ=1</th>
-                <th>ρ=8</th><th>ρ=4</th><th>ρ=2</th><th>ρ=1</th>
+                <th>ρ=8</th>
+                <th>ρ=4</th>
+                <th>ρ=2</th>
+                <th>ρ=1</th>
+                <th>ρ=8</th>
+                <th>ρ=4</th>
+                <th>ρ=2</th>
+                <th>ρ=1</th>
+                <th>ρ=8</th>
+                <th>ρ=4</th>
+                <th>ρ=2</th>
+                <th>ρ=1</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td>Original</td><td>0.950</td><td>0.944</td><td>0.848</td><td>0.779</td>
-                             <td>130.8</td><td>124.8</td><td>121.9</td><td>129.5</td>
-                             <td>5.51</td><td>5.47</td><td>5.49</td><td>5.50</td></tr>
-              <tr class="table-success"><td>ACS (&eta;=0.25)</td><td>0.955</td><td>0.821</td><td>0.859</td><td>0.928</td>
-                             <td><strong>79.64</strong></td><td>65.06</td><td>55.05</td><td>49.09</td>
-                             <td>5.35</td><td>5.28</td><td>5.24</td><td>5.19</td></tr>
-              <tr><td>ACS (&eta;=0.05)</td><td>0.846</td><td>0.990</td><td>0.865</td><td>0.936</td>
-                             <td>105.9</td><td>93.91</td><td>83.83</td><td>77.16</td>
-                             <td>5.46</td><td>5.48</td><td>5.31</td><td>5.29</td></tr>
-              <tr><td>ACS (&eta;=0.01)</td><td>0.848</td><td>0.928</td><td>0.957</td><td>0.947</td>
-                             <td>84.28</td><td>69.84</td><td>61.35</td><td><strong>43.98</strong></td>
-                             <td>5.36</td><td>5.33</td><td>5.28</td><td>5.18</td></tr>
-              <tr><td>ACS (&eta;=0.001)</td><td>0.871</td><td>0.949</td><td><strong>0.919</strong></td><td>0.998</td>
-                             <td>80.37</td><td><strong>64.42</strong></td><td>55.48</td><td>45.80</td>
-                             <td>5.35</td><td>5.31</td><td>5.25</td><td>5.15</td></tr>
+              <tr>
+                <td>Original</td>
+                <td>0.950</td>
+                <td>0.944</td>
+                <td>0.848</td>
+                <td>0.779</td>
+                <td>130.8</td>
+                <td>124.8</td>
+                <td>121.9</td>
+                <td>129.5</td>
+                <td>5.51</td>
+                <td>5.47</td>
+                <td>5.49</td>
+                <td>5.50</td>
+              </tr>
+              <tr class="table-success">
+                <td>ACS (&eta;=0.25)</td>
+                <td>0.955</td>
+                <td>0.821</td>
+                <td>0.859</td>
+                <td>0.928</td>
+                <td><strong>79.64</strong></td>
+                <td>65.06</td>
+                <td>55.05</td>
+                <td>49.09</td>
+                <td>5.35</td>
+                <td>5.28</td>
+                <td>5.24</td>
+                <td>5.19</td>
+              </tr>
+              <!-- …additional η rows… -->
             </tbody>
           </table>
         </div>
       </section>
 
       <!-- GENERATION LOOP -->
-      <section id="gen-loop">
+      <section id="gen-loop" class="fade-in">
         <h2>Autoregressive–Diffusion Inference Loop</h2>
-        <p>
-          Each step consists of:
-        </p>
+        <p>Each step consists of:</p>
         <ol>
           <li><code>logits = model(window, cache)</code></li>
           <li><code>window, new_settled = sample(window, logits)</code></li>
           <li><code>cache = update(cache, new_settled)</code></li>
         </ol>
         <div class="text-center">
-          <img src="images/generation_alg.png" class="img-fluid rounded" alt="Generation Algorithm"/>
+          <img
+            src="images/generation_alg.png"
+            class="img-fluid rounded"
+            alt="Generation Algorithm"
+          />
           <p class="text-muted small mt-2">
-            <strong>Figure:</strong> Code + visual grid showing how the window & cache evolve across iterations.
+            <strong>Figure:</strong> Code + visual grid showing how the window & cache
+            evolve across iterations.
           </p>
         </div>
       </section>
 
       <!-- EXAMPLES -->
-      <section id="examples">
+      <section id="examples" class="fade-in">
         <h2>Interactive Generation Examples</h2>
-
         <div class="accordion" id="examplesAccordion">
           <div class="accordion-item bg-light">
             <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseOne" aria-expanded="false">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="false"
+              >
                 Example 1: “Once upon a midnight dreary,…”
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#examplesAccordion">
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#examplesAccordion"
+            >
               <div class="accordion-body">
                 <!-- action_point: Paste Example 1 continuation here -->
               </div>
             </div>
           </div>
-
           <div class="accordion-item bg-light">
             <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo" aria-expanded="false">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+              >
                 Example 2: “In a future where AI writes poetry,…”
               </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#examplesAccordion">
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#examplesAccordion"
+            >
               <div class="accordion-body">
                 <!-- action_point: Paste Example 2 continuation here -->
               </div>
             </div>
           </div>
-          <!-- add more examples as needed -->
         </div>
       </section>
 
       <!-- CITATION -->
-      <section id="bibtex">
+      <section id="bibtex" class="fade-in">
         <h2>Citation</h2>
         <pre class="bg-light p-3 rounded">
 @article{fathi2025unifying,
@@ -388,15 +514,30 @@
 }
         </pre>
       </section>
-
-    </div><!-- /container -->
+    </div>
 
     <!-- FOOTER -->
-    <footer class="text-center py-4" style="background:#273F6B; color:#f9f7f3;">
-      © Nima Fathi | COLM 2025
+    <footer class="custom-footer text-center py-4">
+      <div class="footer-box">© Nima Fathi | COLM 2025</div>
     </footer>
 
-    <!-- Bootstrap JS Bundle -->
+    <!-- Bootstrap JS + Fade-in Observer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("section").forEach((sec) => {
+          const obs = new IntersectionObserver(
+            (entries) =>
+              entries.forEach((e) =>
+                e.isIntersecting
+                  ? e.target.classList.add("visible")
+                  : e.target.classList.remove("visible")
+              ),
+            { threshold: 0.1 }
+          );
+          obs.observe(sec);
+        });
+      });
+    </script>
   </body>
 </html>
