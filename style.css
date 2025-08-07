@@ -344,7 +344,9 @@ nav.custom-navbar .nav-link:focus {
 .header-with-icon {
   display: inline-flex;
   align-items: center;
-  /* if you want it full–width centered, use display:flex on the container instead */
+  /* prevent the icon or the “DLM:” from ever wrapping */
+  white-space: nowrap;
+  flex-wrap: nowrap;
 }
 
 .header-h-icon {
