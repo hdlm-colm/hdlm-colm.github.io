@@ -308,12 +308,12 @@ nav.custom-navbar .nav-link:focus {
 }
 
 .servicenow-logo {
-  height: 50px;
+  height: 100px;
   transition: transform 0.3s ease;
 }
 
 .servicenow-logo:hover {
-  transform: scale(1.2);
+  transform: scale(1.4);
 }
 
 .conditional-text {
