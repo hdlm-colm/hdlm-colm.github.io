@@ -288,17 +288,19 @@ section h2 {
   padding: 0.1rem 0.5rem;
 }
 
-/* ServiceNow logo styling with larger size */
 .company-attribution {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 1px;
-margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  /* gap isn’t needed if it’s just one logo */
 }
 
-.company-attribution span {
-font-size: 1.2rem;
-color: #4a5568;
-font-weight: 500;
+.servicenow-logo {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.servicenow-logo:hover {
+  transform: scale(1.2);
 }
