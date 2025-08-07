@@ -287,3 +287,18 @@ section h2 {
 .navbar-toggler {
   padding: 0.1rem 0.5rem;
 }
+
+/* ServiceNow logo styling with larger size */
+.company-attribution {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 1px;
+margin-top: 1px;
+}
+
+.company-attribution span {
+font-size: 1.2rem;
+color: #4a5568;
+font-weight: 500;
+}
