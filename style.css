@@ -340,14 +340,3 @@ nav.custom-navbar .nav-link:focus {
   font-style: italic;
   border-radius: 4px;
 }
-.header-logo-title {
-  /* ensure title and icon center nicely */
-  gap: 0.5rem;
-}
-
-.header-icon {
-  width: 32px;
-  height: 32px;
-  /* optional: tweak vertical alignment */
-  vertical-align: middle;
-}
