@@ -1,1 +1,1 @@
-# rl4med-ddpo
+# Unifying Autoregressive and Diffusion-Based Sequence Generation
