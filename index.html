@@ -277,82 +277,71 @@
 
       <!-- RESULTS -->
       <section id="results" class="fade-in">
-        <h2>Results: Pareto Front &amp; Zero-Shot Perplexity</h2>
+        <h2>Results: Pareto Front & Zero-Shot Perplexity</h2>
 
-        <div class="row mb-4">
-          <div class="col-md-6">
+        <!-- If you only have one merged image, put it in a centered col -->
+        <div class="row mb-4 justify-content-center">
+            <div class="col-lg-8 text-center">
             <img
-              src="images/pareto_front.png"
-              class="img-fluid rounded"
-              alt="Entropy vs Perplexity"
+                src="images/pareto_front.png"
+                class="img-fluid rounded"
+                alt="Pareto Front: entropy vs perplexity and MAUVE vs perplexity"
             />
-          </div>
-          </div>
+            </div>
         </div>
+
         <p class="text-muted">
-          HDLM variants (green) lie on the Pareto frontier, offering lower
-          GPT-2-judged perplexity at matched or higher diversity than other diffusion LLM baselines (blue & orange).
+            HDLM variants (green) lie on the Pareto frontier, offering lower
+            GPT-2-judged perplexity at matched or higher diversity than other diffusion-LLM baselines.
         </p>
 
+        <!-- Zero-Shot Table -->
         <div class="table-responsive mb-3">
-          <table class="table table-bordered table-striped">
+            <table class="table table-bordered table-striped">
             <thead class="table-light">
-              <tr>
+                <tr>
                 <th>Method</th>
                 <th>WikiText</th>
                 <th>LAMBADA</th>
                 <th>PubMed</th>
                 <th>arXiv</th>
-              </tr>
+                </tr>
             </thead>
             <tbody>
-              <tr>
+                <tr>
                 <td>Transformer (Sahoo<em>et al.</em>)</td>
-                <td>25.8</td>
-                <td>51.3</td>
-                <td>49.0</td>
-                <td>41.7</td>
-              </tr>
-              <tr>
+                <td>25.8</td><td>51.3</td><td>49.0</td><td>41.7</td>
+                </tr>
+                <tr>
                 <td>SEDD (Lou<em>et al.</em>)</td>
-                <td>36.0</td>
-                <td>48.9</td>
-                <td>45.4</td>
-                <td>40.0</td>
-              </tr>
-              <tr>
+                <td>36.0</td><td>48.9</td><td>45.4</td><td>40.0</td>
+                </tr>
+                <tr>
                 <td>MDLM (Sahoo<em>et al.</em>)</td>
-                <td>33.2</td>
-                <td>48.3</td>
-                <td>43.1</td>
-                <td>37.9</td>
-              </tr>
-              <tr>
+                <td>33.2</td><td>48.3</td><td>43.1</td><td>37.9</td>
+                </tr>
+                <tr>
                 <td>BD3-LM (Arriola<em>et al.</em>)</td>
-                <td>31.3</td>
-                <td>50.0</td>
-                <td>42.5</td>
-                <td>39.2</td>
-              </tr>
-              <tr class="table-success">
+                <td>31.3</td><td>50.0</td><td>42.5</td><td>39.2</td>
+                </tr>
+                <tr class="table-success">
                 <td>γ-Hybrid (Ours)</td>
                 <td>30.0</td>
                 <td><strong>45.4</strong></td>
                 <td>46.6</td>
                 <td>40.6</td>
-              </tr>
-              <tr class="table-success">
+                </tr>
+                <tr class="table-success">
                 <td>ε-Hybrid (Ours)</td>
                 <td>32.5</td>
                 <td>50.2</td>
                 <td><strong>41.2</strong></td>
                 <td><strong>37.8</strong></td>
-              </tr>
+                </tr>
             </tbody>
-          </table>
+            </table>
         </div>
-      </section>
-
+        </section>
       <!-- INFERENCE -->
       <section id="inference" class="fade-in">
         <h2>Inference: Adaptive Correction Sampler (ACS)</h2>
