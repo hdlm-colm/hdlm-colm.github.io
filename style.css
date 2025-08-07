@@ -315,3 +315,13 @@ nav.custom-navbar .nav-link:focus {
 .servicenow-logo:hover {
   transform: scale(1.2);
 }
+
+.conditional-text {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.2em 0.4em;
+  background-color: rgba(124, 215, 82, 0.1);
+  color: #7cd752;
+  font-style: italic;
+  border-radius: 4px;
+}
