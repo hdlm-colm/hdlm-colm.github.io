@@ -51,7 +51,7 @@ footer.custom-footer {
 
 header.custom-header {
   background-color: #1F4E79;
-  color: #fffff0;
+  color: #3a3a3a;
   padding: 2rem 1rem;
   border-radius: 0 0 16px 16px;
   width: 100%;
@@ -59,7 +59,7 @@ header.custom-header {
 }
 
 .custom-header h1 {
-  color: #fffff0;
+  color: #3a3a3a;
   font-size: 2rem;
   line-height: 1.3;
   font-weight: 500;
@@ -69,7 +69,7 @@ header.custom-header {
 .custom-header p,
 .custom-header small,
 .custom-header a {
-  color: #ffffc0 !important;
+  color: #3a3a3a !important;
 }
 
 .custom-header .btn-outline-primary {
