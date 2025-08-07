@@ -353,4 +353,5 @@ nav.custom-navbar .nav-link:focus {
   width: 1.1em;        /* match the x-height of the “D” */
   margin-right: 0.02em; /* tighten the gap */
   vertical-align: middle;
+  flex-shrink: 0;
 }
