@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- background circle -->
+  <circle cx="50" cy="50" r="48" fill="#0D253F" stroke="none"/>
+
+  <!-- letter H in your signature green -->
+  <path fill="#7CD752" d="
+    M 30 20 
+    H 40 
+    V 45 
+    H 60 
+    V 20 
+    H 70 
+    V 80 
+    H 60 
+    V 55 
+    H 40 
+    V 80 
+    H 30 
+    Z"/>
+
+  <!-- small “D” counter as a dot to hint at “LM” -->
+  <circle cx="75" cy="25" r="5" fill="#FFFFFF"/>
+</svg>
