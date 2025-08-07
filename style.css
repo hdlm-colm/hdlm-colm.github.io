@@ -304,7 +304,6 @@ nav.custom-navbar .nav-link:focus {
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
-  /* gap isn’t needed if it’s just one logo */
 }
 
 .servicenow-logo {
@@ -316,16 +315,21 @@ nav.custom-navbar .nav-link:focus {
   transform: scale(1.4);
 }
 
-#examples .nav-pills .nav-link {
-  color: #495057;                 /* dark grey text for inactive tabs */
-  background-color: #e9ecef;      /* light grey pill background */
-  margin: 0 0.25rem;              /* small horizontal gap */
-  border-radius: 0.25rem;
+#examples .nav-pills .nav-link.active {
+  color: #fff !important;        
+  background-color: #0D253F !important; 
 }
 
-#examples .nav-pills .nav-link.active {
-  color: #fff !important;         /* white text on active */
-  background-color: #0D253F !important; /* match your navbar */
+#examples .nav-pills .nav-link {
+  color: #6c757d !important;        
+  background-color: #e9ecef;        
+}
+
+.example-text {
+  background-color: #f8f9fa;  /* very light grey */
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
 }
 .conditional-text {
   display: inline-block;
